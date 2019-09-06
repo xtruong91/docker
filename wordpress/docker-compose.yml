@@ -55,7 +55,7 @@ services:
     volumes:
       - certbot-etc:/etc/letsencrypt
       - wordpress:/var/www/html
-    command: certonly --webroot --webroot-path=/var/www/html --email truongtx91@gmail.com --agree-tos --no-eff-email --force-renewal -d nhathongminh.tech -d www.nhathongminh.tech
+    command: certonly --webroot --webroot-path=/var/www/html --email truongtx91@gmail.com --agree-tos --no-eff-email --staging -d nhathongminh.tech -d www.nhathongminh.tech
     
 volumes:
   certbot-etc:
