@@ -28,6 +28,7 @@ services:
       - WORDPRESS_DB_NAME=wordpress
     volumes:
       - wordpress:/var/www/html
+      - ./uploads.ini:/usr/local/etc/php/conf.d/uploads.ini
     networks:
       - app-network
 
@@ -40,6 +41,9 @@ services:
     ports:
       - "80:80"
       - "443:443"
+    environment:
+     CLIENT_MAX_BODY_SIZE: 30M
+     GLOBAL_MAX_BODY_SIZE: 30M
     volumes:
       - wordpress:/var/www/html
       - ./nginx-conf:/etc/nginx/conf.d
