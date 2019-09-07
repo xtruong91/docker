@@ -1,1 +1,1 @@
-FROM jenkins:2.176.3
+FROM jenkinsci/blueocean
